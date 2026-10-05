@@ -1,0 +1,241 @@
+# Add Login Page to Existing Smart Inventory Management System
+
+I already have a fully working Smart Inventory Management System.
+DO NOT redesign, rewrite, remove, or break any existing functionality.
+
+## Main Requirement
+
+Add a new Login Page that appears before users can access the existing Smart Inventory dashboard.
+
+The existing dashboard, inventory pages, products, database, APIs, styling, navigation, and all existing functionality must remain exactly as they are.
+
+## Important — DO NOT BREAK EXISTING WEBSITE
+
+Before making changes:
+
+1. Inspect the existing project structure and understand the current routing.
+2. Inspect the existing authentication logic, if any.
+3. Inspect the existing UI/theme and reuse its styles where possible.
+4. Do NOT replace the existing application.
+5. Do NOT rewrite existing components unnecessarily.
+6. Do NOT change existing database structures unless absolutely required.
+7. Do NOT modify existing dashboard calculations or inventory data.
+8. Do NOT remove any existing buttons, pages, APIs, or features.
+9. Make the smallest possible changes required to add login functionality.
+10. If something already exists that can be reused, reuse it instead of creating a duplicate.
+
+## Login Page
+
+Create a new route:
+
+`/login`
+
+The login page should have a clean, modern design matching the current Smart Inventory website.
+
+### Login UI
+
+Include:
+
+- Smart Inventory logo/icon
+- "Smart Inventory" heading
+- "Sign in to your account" subtitle
+- Email or Username input
+- Password input
+- Show/Hide password button
+- "Remember me" checkbox
+- "Forgot Password?" text/link
+- Login button
+- "Don't have an account? Register" link
+
+Use the same:
+
+- Dark theme
+- Purple/blue accent colors
+- Fonts
+- Border radius
+- Buttons
+- Shadows
+- Overall visual style
+
+that are already used in my existing Smart Inventory website.
+
+Do NOT introduce a completely different design.
+
+## Authentication
+
+Implement a simple and reliable login system using the authentication/database system already present in the project.
+
+If authentication already exists:
+- Reuse it.
+- Do not create a second authentication system.
+
+If authentication does NOT exist:
+- Create a simple authentication implementation that fits the existing project architecture.
+- Store passwords securely using proper password hashing.
+- Never store plain-text passwords.
+
+For development/testing, provide a test user if the project currently has no users.
+
+Example:
+
+Email:
+admin@smartinventory.com
+
+Password:
+Admin@123
+
+Only use this as a development/demo account unless a real user-management system already exists.
+
+## Login Behaviour
+
+When the user opens:
+
+`/login`
+
+show the login page.
+
+After successful login:
+
+redirect to the EXISTING dashboard.
+
+For example:
+
+`/dashboard`
+
+or whatever route the existing dashboard currently uses.
+
+IMPORTANT:
+Do not create a new dashboard.
+
+Use the existing dashboard.
+
+If the user is not logged in and tries to access the protected dashboard, redirect them to:
+
+`/login`
+
+After logout:
+
+redirect the user back to:
+
+`/login`
+
+## Error Handling
+
+If incorrect credentials are entered, display a simple message:
+
+"Invalid email/username or password."
+
+Do not expose sensitive authentication information.
+
+Prevent empty form submission and show appropriate validation messages.
+
+## Forgot Password
+
+Create the UI link for:
+
+"Forgot Password?"
+
+If a complete password-reset system does not already exist, do NOT build a complicated email system.
+
+Instead, create a simple placeholder page/message explaining that password reset functionality can be configured later.
+
+## Register
+
+Create the:
+
+"Don't have an account? Register"
+
+link/UI.
+
+If registration functionality does not already exist, keep it simple and do not modify the existing application unnecessarily.
+
+## Session Protection
+
+After successful login, maintain the user's login session using the project's existing authentication/session mechanism.
+
+The user should remain logged in while navigating between the existing inventory pages.
+
+Add logout functionality only if the existing application does not already have it.
+
+## Visual Design
+
+The login page should look similar to this style:
+
+- Full-page dark background
+- Centered login card
+- Smart Inventory branding
+- Purple/blue gradient or accent button
+- Rounded input fields
+- Clean spacing
+- Professional but simple student-project style
+- Responsive on desktop and mobile
+
+Example layout:
+
+Smart Inventory
+Sign in to your account
+
+[ Email or Username ]
+
+[ Password              👁 ]
+
+☐ Remember me       Forgot Password?
+
+[        Login        ]
+
+---------------- OR ----------------
+
+Don't have an account? Register
+
+## Routing
+
+Add only the necessary routes.
+
+Expected flow:
+
+User opens website
+        ↓
+Check authentication
+        ↓
+Not logged in → /login
+        ↓
+Successful login
+        ↓
+Existing Dashboard
+        ↓
+Existing Inventory System
+
+Do NOT change the existing dashboard route or functionality unless required for authentication protection.
+
+## Final Safety Requirement
+
+Before finishing:
+
+1. Run the application.
+2. Test `/login`.
+3. Test successful login.
+4. Test incorrect login.
+5. Test redirect to the existing dashboard.
+6. Test refreshing the dashboard after login.
+7. Test logout.
+8. Test that existing inventory features still work.
+9. Check that existing products and data are unchanged.
+10. Check for console/build errors.
+
+If any existing functionality breaks, FIX IT before finishing.
+
+## VERY IMPORTANT
+
+DO NOT redesign my existing Smart Inventory website.
+
+DO NOT replace my existing dashboard.
+
+DO NOT delete existing code.
+
+DO NOT change existing inventory functionality.
+
+DO NOT create duplicate pages.
+
+ONLY add the login/authentication functionality and the minimum routing/session changes required.
+
+Keep the existing website exactly as it currently looks and works.

@@ -1,0 +1,74 @@
+{
+  "project_name": "Smart Inventory Management System",
+  "type": "full_stack_web_application",
+  "goal": "Build a modern, elegant, and professional Inventory Management System website with a beautiful UI/UX similar to SaaS dashboards used in real companies.",
+  
+  "tech_stack": {
+    "frontend": ["HTML5", "CSS3 (Flexbox + Grid)", "JavaScript (ES6)"],
+    "backend": ["Python Flask"],
+    "database": "SQLite"
+  },
+
+  "ui_style": {
+    "design_theme": "modern SaaS dashboard",
+    "color_palette": {
+      "primary": "#4F46E5",
+      "secondary": "#06B6D4",
+      "background": "#0F172A",
+      "card": "#111827",
+      "text": "#F8FAFC",
+      "accent": "#22C55E",
+      "danger": "#EF4444"
+    },
+    "layout_style": "sidebar navigation + top navbar + dashboard cards",
+    "ui_elements": [
+      "glassmorphism cards",
+      "smooth shadows and hover animations",
+      "rounded corners",
+      "gradient buttons",
+      "icons for actions",
+      "responsive design for mobile and desktop"
+    ]
+  },
+
+  "features": [
+    "Dashboard with total products, stock value, and low stock alerts",
+    "Add product with animated modal form",
+    "View products in modern table with sorting",
+    "Edit and delete product with confirmation popup",
+    "Search and filter products in real time",
+    "Low stock highlight with warning badge",
+    "Animated notifications (success/error)",
+    "Dark mode UI default"
+  ],
+
+  "pages": [
+    "Dashboard (main analytics view)",
+    "Inventory page (product list)",
+    "Add/Edit product modal system"
+  ],
+
+  "frontend_requirements": [
+    "Use modern dashboard layout (sidebar + main content)",
+    "Use animations (hover effects, transitions)",
+    "Use card-based UI for statistics",
+    "Make UI visually appealing like professional admin panels"
+  ],
+
+  "backend_requirements": [
+    "Flask REST API for CRUD operations",
+    "Use SQLite database for storing products",
+    "Return JSON responses",
+    "Handle errors properly (validation, missing fields)"
+  ],
+
+  "extra_requirements": [
+    "Fully responsive design (mobile + desktop)",
+    "Clean and professional UI like SaaS products",
+    "Well-commented code",
+    "Organized folder structure (app.py, templates, static/css, static/js)",
+    "Make it look like a real-world inventory software, not a student project"
+  ],
+
+  "instructions_for_ai": "Generate a complete production-style project with premium UI design. Focus heavily on modern dashboard aesthetics, smooth UX, and clean code structure. Avoid basic/plain UI. Make it visually impressive and professional."
+}

@@ -1,0 +1,1 @@
+- [Inventory account scope](inventory-account-scope.md) — current login gates one shared catalog; it does not partition inventory by account.
